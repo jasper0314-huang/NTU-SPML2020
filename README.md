@@ -76,6 +76,9 @@ optional arguments:
 ```
 ### hw2/test.py
 test model performance on specified input images and labels(tensor stored by torch.save)
+include following additional defense method:<br>
+(1) JPEG Compression<br>
+(2) Defense-GAN<br>
 ```bash
 usage: test.py [-h] [--dfgan DFGAN] [--init_num INIT_NUM]
                [--rec_iter REC_ITER] [--ckpt CKPT] [--imgs IMGS]
