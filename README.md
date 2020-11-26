@@ -41,6 +41,40 @@ optional arguments:
 ```
 
 ## Homework2 Black-box Defense
+### hw2/adv_train.py
+Provide (1) Standard Adversarial Training (2) Friendly Adversarial Training (3) Intermittent Adversarial Training<br>
+on pytorchcv models.
+```bash
+usage: adv_train.py [-h] [--sep SEP] [--bs BS] [--lr LR] [--epoch EPOCH]
+                    [--friendly FRIENDLY] [--rand_start RAND_START]
+                    [--eps EPS] [--iter ITER] [--alpha ALPHA] [--mu MU]
+                    [--gpu GPU] [--log_path LOG_PATH] [--save_path SAVE_PATH]
+                    model
+
+positional arguments:
+  model                 training model (pytorchcv)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --sep SEP             epoch gap for regenerate adversarial examples
+                        (default: 1)
+  --bs BS               batch size (default: 128)
+  --lr LR               learning rate (default: 0.1)
+  --epoch EPOCH         epoch (default: 120)
+  --friendly FRIENDLY   wether using friendly setting (default: False)
+  --rand_start RAND_START
+                        random initialize start point as PGD attack (default:
+                        True)
+  --eps EPS             Linf constraint of IFGSM *default(8/255) (default:
+                        0.03137254901960784)
+  --iter ITER           iter of IFGSM (default: 10)
+  --alpha ALPHA         alaph of IFGSM (default: 0.2)
+  --mu MU               mu of IFGSM (default: 0.0)
+  --gpu GPU             GPU device (default: 0)
+  --log_path LOG_PATH   log file save to {log_path}_{model} (default: log)
+  --save_path SAVE_PATH
+                        ckpt file save to {save_path}_{model} (default: ckpt)
+```
 
 
 ## Final Project
