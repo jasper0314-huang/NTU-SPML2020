@@ -68,7 +68,7 @@ train_transform = transforms.Compose([
 ])
 
 cifar_train_dataset = torchvision.datasets.CIFAR10(
-        root = "/tmp2/b07501122/.torch",
+        root = "~/.torch",
         train = True,
         download = True,
         transform = train_transform)
@@ -81,8 +81,8 @@ train_size = len(cifar_loader.dataset)
 ############
 # for testing propse
 # delete it if no needed
-test_X = torch.load("/tmp2/b07501122/SPML/adv_examples/cifar_adv_imgs")
-test_Y = torch.load("/tmp2/b07501122/SPML/adv_examples/cifar_labels")
+test_X = torch.load("~/cifar_adv_imgs")
+test_Y = torch.load("~/cifar_labels")
 
 test_dataset = TensorDataset(test_X, test_Y)
 test_loader = DataLoader(test_dataset, batch_size=args.bs, shuffle=False)

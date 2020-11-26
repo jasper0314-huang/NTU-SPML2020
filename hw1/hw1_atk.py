@@ -29,7 +29,7 @@ parser.add_argument("--gpu", type=int, default=0, help="gpu number")
 parser.add_argument("--model", type=str, default="", help="pytorchcv model")
 parser.add_argument("--model_ckpt", type=str, default="", help="model's checkpoint")
 parser.add_argument("--models_file", type=str, default="", help="pytorchcv models file (ignore if model not empty)")
-parser.add_argument("--save_file", type=str, default="/tmp2/b07501122/SPML/adv_examples/cifar_adv_imgs", help="adv images save path")
+parser.add_argument("--save_file", type=str, default="", help="adv images save path")
 
 args = parser.parse_args()
 if args.gpu != 0:
@@ -49,17 +49,11 @@ attack_fn = attacks[args.attack]
 # dataset
 ##############################
 cifar_test_dataset = torchvision.datasets.CIFAR10(
-        root = "/tmp2/b07501122/.torch", 
+        root = "~/.torch", 
         train = False, 
         download = True,
         transform = transforms.ToTensor())
-'''
-cifar_train_dataset = torchvision.datasets.CIFAR10(
-        root = "/tmp2/b07501122/.torch",
-        train = True,
-        download = True,
-        transform = transforms.ToTensor())
-'''
+
 cifar_dataset = cifar_test_dataset
 cifar_loader = DataLoader(cifar_dataset, batch_size=args.bs, shuffle=False)
 

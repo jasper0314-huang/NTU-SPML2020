@@ -28,8 +28,8 @@ parser.add_argument("--rec_iter", type=int, default=200, help="Defense-GAN confi
 ########################
 parser.add_argument("--testnum", type=int, default=10000, help="number of testing images")
 parser.add_argument("--ckpt", type=str, default="", help="checkpoint path of model / default as pytorchcv pretrained weights")
-parser.add_argument("--imgs", type=str, default="/tmp2/b07501122/SPML/adv_examples/cifar_imgs", help="path to images data(tensor)")
-parser.add_argument("--labels", type=str, default="/tmp2/b07501122/SPML/adv_examples/cifar_labels", help="path to labels data(tensor)")
+parser.add_argument("--imgs", type=str, default="", help="path to images data(tensor)")
+parser.add_argument("--labels", type=str, default="", help="path to labels data(tensor)")
 parser.add_argument("--bs", type=int, default=64, help="training batch_size")
 parser.add_argument("--gpu", type=int, default=0, help="gpu number")
 
