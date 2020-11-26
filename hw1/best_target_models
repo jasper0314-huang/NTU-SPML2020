@@ -1,0 +1,15 @@
+nin_cifar10
+resnet20_cifar10
+preresnet20_cifar10
+seresnet20_cifar10
+sepreresnet20_cifar10
+pyramidnet110_a48_cifar10
+densenet40_k12_cifar10
+xdensenet40_2_k24_bc_cifar10
+wrn16_10_cifar10
+wrn20_10_1bit_cifar10
+ror3_56_cifar10
+rir_cifar10
+shakeshakeresnet20_2x16d_cifar10
+diaresnet20_cifar10
+diapreresnet20_cifar10
