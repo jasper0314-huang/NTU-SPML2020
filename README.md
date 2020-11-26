@@ -3,12 +3,12 @@ NTU CSIE5436 Security and Privacy of Machine Learning(2020 FALL)
 
 ## Homework1 Gray-box Attack
 Generate adversarial examples from CIFAR10 testing set.
-Attack method includes:
-(1) FGSM
-(2) I-FGSM
-(3) MI-FGSM
-(4) PGD
-(5) Ensemble Attack
+Attack method includes:<br>
+(1) FGSM<br>
+(2) I-FGSM<br>
+(3) MI-FGSM<br>
+(4) PGD<br>
+(5) Ensemble Attack<br>
 ```bash
 usage: hw1_atk.py [-h] [--bs BS] [--eps EPS] [--attack ATTACK] [--iter ITER]
                   [--alpha ALPHA] [--mu MU] [--rand_start RAND_START]
