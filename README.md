@@ -75,8 +75,8 @@ optional arguments:
                         ckpt file save to {save_path}_{model} (default: ckpt)
 ```
 ### hw2/test.py
-test model performance on specified input images and labels(tensor stored by torch.save)
-include following additional defense method:<br>
+Test model performance on specified input images and labels(tensor stored by torch.save).<br>
+Include following additional defense method:<br>
 (1) JPEG Compression<br>
 (2) Defense-GAN<br>
 ```bash
