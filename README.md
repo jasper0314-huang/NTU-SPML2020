@@ -11,18 +11,14 @@ Attack method includes:<br>
 (4) PGD<br>
 (5) Ensemble Attack<br>
 ```bash
-usage: hw1_atk.py [-h] [--bs BS] [--eps EPS] [--attack ATTACK] [--iter ITER]
-                  [--alpha ALPHA] [--mu MU] [--rand_start RAND_START]
-                  [--gpu GPU] [--model MODEL] [--model_ckpt MODEL_CKPT]
-                  [--models_file MODELS_FILE] [--save_file SAVE_FILE]
+usage: hw1_atk.py [-h] [--bs BS] [--eps EPS] [--attack ATTACK] [--iter ITER] [--alpha ALPHA] [--mu MU] [--rand_start RAND_START]
+                  [--gpu GPU] [--model MODEL] [--model_ckpt MODEL_CKPT] [--models_file MODELS_FILE] [--save_file SAVE_FILE]
 
 optional arguments:
   -h, --help            show this help message and exit
   --bs BS               batch size (default: 16)
-  --eps EPS             Linf constraint for attack (default:
-                        0.03137254901960784)
-  --attack ATTACK       attacks mehtods now supported: {fgsm/mifgsm} (default:
-                        mifgsm)
+  --eps EPS             Linf constraint for attack (default: 0.03137254901960784)
+  --attack ATTACK       attacks mehtods now supported: {fgsm/mifgsm} (default: mifgsm)
   --iter ITER           IFGSM iter (default: 10)
   --alpha ALPHA         IFGSM alaph (default: 0.1)
   --mu MU               IFGSM mu (default: 1.0)
@@ -33,21 +29,18 @@ optional arguments:
   --model_ckpt MODEL_CKPT
                         model's checkpoint (default: )
   --models_file MODELS_FILE
-                        pytorchcv models file (ignore if model not empty)
-                        (default: )
+                        pytorchcv models file (ignore if model not empty) (default: )
   --save_file SAVE_FILE
-                        adv images save path (default:
-                        /tmp2/b07501122/SPML/adv_examples/cifar_adv_imgs)
+                        adv images save path (default: )
 ```
 
 ## Homework2 Black-box Defense
 ### hw2/adv_train.py
 Provide (1) Standard Adversarial Training (2) Friendly Adversarial Training (3) Intermittent Adversarial Training on pytorchcv models.
 ```bash
-usage: adv_train.py [-h] [--sep SEP] [--bs BS] [--lr LR] [--epoch EPOCH]
-                    [--friendly FRIENDLY] [--rand_start RAND_START]
-                    [--eps EPS] [--iter ITER] [--alpha ALPHA] [--mu MU]
-                    [--gpu GPU] [--log_path LOG_PATH] [--save_path SAVE_PATH]
+usage: adv_train.py [-h] [--sep SEP] [--bs BS] [--lr LR] [--epoch EPOCH] [--friendly FRIENDLY] [--rand_start RAND_START]
+                    [--eps EPS] [--iter ITER] [--alpha ALPHA] [--mu MU] [--gpu GPU] [--log_path LOG_PATH]
+                    [--save_path SAVE_PATH]
                     model
 
 positional arguments:
@@ -55,17 +48,14 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --sep SEP             epoch gap for regenerate adversarial examples
-                        (default: 1)
+  --sep SEP             epoch gap for regenerate adversarial examples (default: 1)
   --bs BS               batch size (default: 128)
   --lr LR               learning rate (default: 0.1)
   --epoch EPOCH         epoch (default: 120)
   --friendly FRIENDLY   wether using friendly setting (default: False)
   --rand_start RAND_START
-                        random initialize start point as PGD attack (default:
-                        True)
-  --eps EPS             Linf constraint of IFGSM *default(8/255) (default:
-                        0.03137254901960784)
+                        random initialize start point as PGD attack (default: True)
+  --eps EPS             Linf constraint of IFGSM *default(8/255) (default: 0.03137254901960784)
   --iter ITER           iter of IFGSM (default: 10)
   --alpha ALPHA         alaph of IFGSM (default: 0.2)
   --mu MU               mu of IFGSM (default: 0.0)
@@ -80,9 +70,8 @@ Include following additional defense method:<br>
 (1) JPEG Compression<br>
 (2) Defense-GAN<br>
 ```bash
-usage: test.py [-h] [--dfgan DFGAN] [--init_num INIT_NUM]
-               [--rec_iter REC_ITER] [--ckpt CKPT] [--imgs IMGS]
-               [--labels LABELS] [--bs BS] [--gpu GPU]
+usage: test.py [-h] [--jpeg JPEG] [--quality QUALITY] [--dfgan DFGAN] [--init_num INIT_NUM] [--rec_iter REC_ITER]
+               [--testnum TESTNUM] [--ckpt CKPT] [--imgs IMGS] [--labels LABELS] [--bs BS] [--gpu GPU]
                model
 
 positional arguments:
@@ -90,15 +79,15 @@ positional arguments:
 
 optional arguments:
   -h, --help           show this help message and exit
+  --jpeg JPEG          Apply JPEG Compression preprocessing or not (default: False)
+  --quality QUALITY    JPEG config: compression quality(0-100). High quality means little compression (default: 100)
   --dfgan DFGAN        Apply Defense-GAN preprocessing or not (default: False)
   --init_num INIT_NUM  Defense-GAN config: init_num (default: 5)
   --rec_iter REC_ITER  Defense-GAN config: rec_iter (default: 200)
-  --ckpt CKPT          checkpoint path of model / default as pytorchcv
-                       pretrained weights (default: )
-  --imgs IMGS          path to images data(tensor) (default:
-                       /tmp2/b07501122/SPML/adv_examples/cifar_imgs)
-  --labels LABELS      path to labels data(tensor) (default:
-                       /tmp2/b07501122/SPML/adv_examples/cifar_labels)
+  --testnum TESTNUM    number of testing images (default: 10000)
+  --ckpt CKPT          checkpoint path of model / default as pytorchcv pretrained weights (default: )
+  --imgs IMGS          path to images data(tensor) (default: )
+  --labels LABELS      path to labels data(tensor) (default: )
   --bs BS              training batch_size (default: 64)
   --gpu GPU            gpu number (default: 0)
 ```
