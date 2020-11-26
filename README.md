@@ -42,8 +42,7 @@ optional arguments:
 
 ## Homework2 Black-box Defense
 ### hw2/adv_train.py
-Provide (1) Standard Adversarial Training (2) Friendly Adversarial Training (3) Intermittent Adversarial Training<br>
-on pytorchcv models.
+Provide (1) Standard Adversarial Training (2) Friendly Adversarial Training (3) Intermittent Adversarial Training on pytorchcv models.
 ```bash
 usage: adv_train.py [-h] [--sep SEP] [--bs BS] [--lr LR] [--epoch EPOCH]
                     [--friendly FRIENDLY] [--rand_start RAND_START]
@@ -74,6 +73,31 @@ optional arguments:
   --log_path LOG_PATH   log file save to {log_path}_{model} (default: log)
   --save_path SAVE_PATH
                         ckpt file save to {save_path}_{model} (default: ckpt)
+```
+### hw2/test.py
+test model performance on specified input images and labels(tensor stored by torch.save)
+```bash
+usage: test.py [-h] [--dfgan DFGAN] [--init_num INIT_NUM]
+               [--rec_iter REC_ITER] [--ckpt CKPT] [--imgs IMGS]
+               [--labels LABELS] [--bs BS] [--gpu GPU]
+               model
+
+positional arguments:
+  model                test model name (pytorchcv model)
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --dfgan DFGAN        Apply Defense-GAN preprocessing or not (default: False)
+  --init_num INIT_NUM  Defense-GAN config: init_num (default: 5)
+  --rec_iter REC_ITER  Defense-GAN config: rec_iter (default: 200)
+  --ckpt CKPT          checkpoint path of model / default as pytorchcv
+                       pretrained weights (default: )
+  --imgs IMGS          path to images data(tensor) (default:
+                       /tmp2/b07501122/SPML/adv_examples/cifar_imgs)
+  --labels LABELS      path to labels data(tensor) (default:
+                       /tmp2/b07501122/SPML/adv_examples/cifar_labels)
+  --bs BS              training batch_size (default: 64)
+  --gpu GPU            gpu number (default: 0)
 ```
 
 
