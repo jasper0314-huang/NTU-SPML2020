@@ -90,16 +90,3 @@ print(f"checkpoint: {args.ckpt}")
 print(f"testing set: {args.imgs}")
 print(f"Acc: {hit / accu_num:.4f}")
 print("=====================================")
-        
-
-
-
-
-
-
-
-
-
-
-
-
