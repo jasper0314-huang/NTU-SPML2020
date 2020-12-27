@@ -173,14 +173,3 @@ for e in range(1, args.epoch + 1):
     # scheduler
     ##################################
     scheduler.step()
-
-
-
-
-
-
-
-
-
-
-
