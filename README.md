@@ -5,7 +5,7 @@ NTU CSIE5436 Security and Privacy of Machine Learning(2020 FALL)
 ### Requirement
 You will create untargeted adversarial examples to attack models for the CIFAR-10 classification task. (https://www.cs.toronto.edu/~kriz/cifar.html). Your goal is to bring down the model accuracy as much as possible.
 
-Five models will be chosen from this repository: https://github.com/osmr/imgclsmob.  (連結到外部網站。)Some preprocessing defenses may be used to improve the model robustness.
+Five models will be chosen from this repository: https://github.com/osmr/imgclsmob. Some preprocessing defenses may be used to improve the model robustness.
 
 You are allowed to change each pixel of the input image up to epsilon=8 on the 0-255 pixel scale. Of course, each pixel after the perturbation still needs to be within 0 to 255 in order to be a valid image.
 
@@ -13,7 +13,7 @@ Your attack will be evaluated based on the accuracy on the evaluation set (downl
 
 You can use any programming languages and packages. Please add a README.txt file to tell people how to run your code.
 
-You need to write a report describing your methods.  You can talk about, for example,  why you choose certain (combination of) methods and any internal experiments that you did (e.g., accuracy on substitute models, or against popular defenses). Please write it using Latex with the NeurIPS conference template (https://nips.cc/Conferences/2020/PaperInformation/StyleFiles (連結到外部網站。)). Report length is at most 4 pages, excluding references (please cite the work that you used in this homework).
+You need to write a report describing your methods.  You can talk about, for example,  why you choose certain (combination of) methods and any internal experiments that you did (e.g., accuracy on substitute models, or against popular defenses). Please write it using Latex with the NeurIPS conference template (https://nips.cc/Conferences/2020/PaperInformation/StyleFiles). Report length is at most 4 pages, excluding references (please cite the work that you used in this homework).
 
 ### hw1/hw1_atk.py
 Generate adversarial examples from CIFAR10 testing set.
@@ -116,6 +116,12 @@ optional arguments:
 ```
 
 
-## Final Project
-Poisoning Attack on Defense GAN
+## Group Final Project
+### Requirement
+• Can be anything related to course
+• Write a report with at most 6 pages in NeurIPS format
+• There will be 30 minutes final presentation + report
+
+### Poisoning Attack on Defense GAN
+
 https://github.com/jasper0314-huang/NTU-SPML2020/blob/main/FinalProject_report.pdf
