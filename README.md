@@ -119,7 +119,9 @@ optional arguments:
 ## Group Final Project
 ### Specification
 • Can be anything related to course
+
 • Write a report with at most 6 pages in NeurIPS format
+
 • There will be 30 minutes final presentation + report
 
 ### Poisoning Attack on Defense GAN
