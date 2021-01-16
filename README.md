@@ -2,7 +2,7 @@
 NTU CSIE5436 Security and Privacy of Machine Learning(2020 FALL)
 
 ## Homework1 Gray-box Attack
-### Requirement
+### Specification
 You will create untargeted adversarial examples to attack models for the CIFAR-10 classification task. (https://www.cs.toronto.edu/~kriz/cifar.html). Your goal is to bring down the model accuracy as much as possible.
 
 Five models will be chosen from this repository: https://github.com/osmr/imgclsmob. Some preprocessing defenses may be used to improve the model robustness.
@@ -48,7 +48,7 @@ optional arguments:
 ```
 
 ## Homework2 Black-box Defense
-### Requirement
+### Specification
 In this homework, you need to train a robust model for CIFAR-10 that can defend the adversarial examples. That is, you need to submit the code of model architecture and the trained weight, then TA will use adversarial examples (up to epsilon=8 in the L_infinity norm) to attack your model. Good luck.
 
 Write a report with at most 4 pages in NeurIPS format
@@ -117,7 +117,7 @@ optional arguments:
 
 
 ## Group Final Project
-### Requirement
+### Specification
 • Can be anything related to course
 • Write a report with at most 6 pages in NeurIPS format
 • There will be 30 minutes final presentation + report
