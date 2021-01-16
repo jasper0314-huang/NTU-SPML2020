@@ -2,6 +2,19 @@
 NTU CSIE5436 Security and Privacy of Machine Learning(2020 FALL)
 
 ## Homework1 Gray-box Attack
+### Requirement
+You will create untargeted adversarial examples to attack models for the CIFAR-10 classification task. (https://www.cs.toronto.edu/~kriz/cifar.html). Your goal is to bring down the model accuracy as much as possible.
+
+Five models will be chosen from this repository: https://github.com/osmr/imgclsmob.  (連結到外部網站。)Some preprocessing defenses may be used to improve the model robustness.
+
+You are allowed to change each pixel of the input image up to epsilon=8 on the 0-255 pixel scale. Of course, each pixel after the perturbation still needs to be within 0 to 255 in order to be a valid image.
+
+Your attack will be evaluated based on the accuracy on the evaluation set (download here), which consists of 100 images from CIFAR-10 (10 images of each class).
+
+You can use any programming languages and packages. Please add a README.txt file to tell people how to run your code.
+
+You need to write a report describing your methods.  You can talk about, for example,  why you choose certain (combination of) methods and any internal experiments that you did (e.g., accuracy on substitute models, or against popular defenses). Please write it using Latex with the NeurIPS conference template (https://nips.cc/Conferences/2020/PaperInformation/StyleFiles (連結到外部網站。)). Report length is at most 4 pages, excluding references (please cite the work that you used in this homework).
+
 ### hw1/hw1_atk.py
 Generate adversarial examples from CIFAR10 testing set.
 Attack method includes:<br>
@@ -35,6 +48,16 @@ optional arguments:
 ```
 
 ## Homework2 Black-box Defense
+### Requirement
+In this homework, you need to train a robust model for CIFAR-10 that can defend the adversarial examples. That is, you need to submit the code of model architecture and the trained weight, then TA will use adversarial examples (up to epsilon=8 in the L_infinity norm) to attack your model. Good luck.
+
+Write a report with at most 4 pages in NeurIPS format
+
+Methods you tried
+Why you choose certain methods in your submission
+Experiments that you did
+Findings or insights you gained
+
 ### hw2/adv_train.py
 Provide (1) Standard Adversarial Training (2) Friendly Adversarial Training (3) Intermittent Adversarial Training on pytorchcv models.
 ```bash
