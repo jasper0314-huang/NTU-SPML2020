@@ -95,3 +95,4 @@ optional arguments:
 
 ## Final Project
 Poisoning Attack on Defense GAN
+https://github.com/jasper0314-huang/NTU-SPML2020/blob/main/FinalProject_report.pdf
