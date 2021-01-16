@@ -18,7 +18,7 @@ You need to write a report describing your methods.  You can talk about, for exa
 ### hw1/hw1_atk.py
 Generate adversarial examples from CIFAR10 testing set.
 Attack method includes:<br>
-FGSM / I-FGSM / MI-FGSM / PGD / Ensemble Attack
+(1) FGSM (2) I-FGSM (3) MI-FGSM (4) PGD (5) Ensemble Attack
 ```bash
 usage: hw1_atk.py [-h] [--bs BS] [--eps EPS] [--attack ATTACK] [--iter ITER] [--alpha ALPHA] [--mu MU] [--rand_start RAND_START]
                   [--gpu GPU] [--model MODEL] [--model_ckpt MODEL_CKPT] [--models_file MODELS_FILE] [--save_file SAVE_FILE]
